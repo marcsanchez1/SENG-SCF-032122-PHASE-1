@@ -18,4 +18,6 @@
 
 ![cloning-part-2](assets/git-clone.png)
 
-### 5. cd into that directory and you're there! If you successfully added `code` to your Shell commands when you set up your environment, you should be able to use the command `code` plus the file you're cd'ing into. Or if you've cd'ed in as a separate command, you can use `code .` to open the new file.
+### 5. cd into that directory and you're there! 
+
+**If you successfully added `code` to your Shell commands when you set up your environment, you should be able to use the command `code` plus the file you're cd'ing into. Or if you've cd'ed in as a separate command, you can use `code .` to open the new file.**
