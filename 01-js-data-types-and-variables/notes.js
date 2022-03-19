@@ -1,4 +1,4 @@
-// this is where you can take notes without risking merge conflicts when you pull down new code from Github (origin)
+// this is where you can take notes without risking merge conflicts when you pull down new code from Github (the remote is called origin => i.e., where your online repo for this directory is located)
 
 // also feel free to use this as a sandbox!
 
