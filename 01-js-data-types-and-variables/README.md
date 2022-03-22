@@ -45,7 +45,7 @@ Note: you can search for and install all of these at the left side of your VS Co
 
 ---
 
-### Deeeep dive into JS data types and their inherent quirks [JS data types article](https://codeburst.io/javascript-essentials-types-data-structures-3ac039f9877b)
+### Deeeep dive into [JS data types and their inherent quirks](https://codeburst.io/javascript-essentials-types-data-structures-3ac039f9877b)
 
 ---
 
