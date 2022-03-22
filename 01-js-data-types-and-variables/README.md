@@ -1,18 +1,32 @@
 <link href="styles/readmestyle.css" rel="stylesheet"></link>
 
+**Please remember that you will not have to memorize anything in this course. There is no final exam to study for! Just get comfortable utilizing the concepts as you experiment and write code. Be curious and have fun! 😁**
+
+![google](https://i.redd.it/ms8u3bl2kw351.jpg)
+
 # Data Types and Variables
 
 
 ## SWABTs (short for `Students Will Be Able To`)
 - utilize `console.log()` for testing and experimenting
-- identify and differentiate the various JS primitive datatypes (no need to memorize!)
 - understand the difference between `let`, `const` and `var`
-- practice writing conditional statements for control flow
+- identify and differentiate the various JS primitive datatypes (no need to memorize!)
+- practice writing conditional statements
 
 ---
 
 ### Warm Up Question
 - If you could only ever have one flavor of ice cream *for the rest of your life*, consider which one it would be. Initialize a variable (i.e., declare and set to a value) accordingly.
+
+---
+### Tips for Debugging (and for asking for help!)
+
+Asking the right questions at the right time: 
+1. What am I trying to do/accomplish?
+2. What is happening instead?
+3. Why do I think this is happening? (Make some assumptions.)
+4. What can I change to get closer to what I want to happen?
+5. Do I see what I am expecting to see? If not, double back to Step 2.
 
 ---
 
@@ -27,13 +41,11 @@ Note: you can search for and install all of these at the left side of your VS Co
 
 ---
 
-### [Difference Between a Statement and an Expression (I can never remember it myself)](https://javascript.plainenglish.io/what-is-an-expression-and-what-is-a-statement-in-javascript-and-how-to-remember-it-4d6920ee7b08)
+**For those of you looking for VS Code shortcuts for your PC, [here is a link](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf). If you need the cheatsheet for your Mac, you can type Command+K and Command+R while in VS Code, and the window will open**
 
 ---
 
-**Please remember that you will not have to memorize anything in this course. There is no final exam to study for! Just get comfortable utilizing the concepts as you experiement and write code. Be curious and have fun! 😁**
-
-![google](https://i.redd.it/ms8u3bl2kw351.jpg)
+### [Difference Between a Statement and an Expression (I can never remember it myself)](https://javascript.plainenglish.io/what-is-an-expression-and-what-is-a-statement-in-javascript-and-how-to-remember-it-4d6920ee7b08)
 
 ---
 

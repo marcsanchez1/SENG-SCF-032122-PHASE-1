@@ -5,3 +5,4 @@
 // Running the file ```node notes.js``` (without the backticks) will allow you to explore/play around with code. Make sure you have cd'ed into the inner folder before you do this.
 
 console.log("hi there!!")
+
