@@ -37,7 +37,7 @@ Note: you can search for and install all of these at the left side of your VS Co
     - Browser automatically updates, no need to refresh page
 
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-    - Shift + Option + F shortcut in Mac (or Shift + Alt + f on Windows) => Automatically formats/indents your code and adds semi-colons at ends of statements. You can customize to leave out any language you want to.
+    - Once installed: `Shift + Option + F` shortcut in Mac (or `Shift + Alt + f` on Windows) => Automatically formats/indents your code and adds semi-colons at ends of statements. You can customize to leave out any language you want to.
 
 ---
 
@@ -52,5 +52,5 @@ Note: you can search for and install all of these at the left side of your VS Co
 **If you're enjoying the format of this README at all.... here is a [link](https://www.markdownguide.org/cheat-sheet/) for you!**
 
 
-Confetti Image by [Jason Leung](https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/confetti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+Confetti Image in our index.html is by [Jason Leung](https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/confetti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
   
