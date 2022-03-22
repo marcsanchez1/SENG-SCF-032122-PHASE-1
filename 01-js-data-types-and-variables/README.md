@@ -41,7 +41,7 @@ Note: you can search for and install all of these at the left side of your VS Co
 
 ---
 
-**For those of you looking for VS Code shortcuts for your PC, [here is a link](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf). If you need the cheatsheet for your Mac, you can type `Command+K` and `Command+R` while in VS Code, and the window will open**
+**For those of you looking for VS Code shortcuts for your PC, [here is a link](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf). If you need the cheatsheet for your Mac, you can type `Command+K` and then `Command+R` while in VS Code, and the window will open**
 
 ---
 
