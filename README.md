@@ -21,4 +21,16 @@
 ### 5. cd into that directory and you're there! 
 
 
-**Note: If you successfully added `code` to your Shell commands when you set up your environment, you should be able to use the command `code` plus the file you're cd'ing into. Or if you've cd'ed in as a separate command, you can use `code .` to open the new file.**
+*Note: If you successfully added `code` to your Shell commands when you set up your environment, you should be able to use the command `code` plus the file you're cd'ing into. Or if you've cd'ed in as a separate command, you can use `code .` to open the new file.*
+
+### 6. Go to your FORKED version and click Fetch upstream. Then click fetch and merge. This will sync your repo with the learn-co-students one (if and when there are updates for you).
+
+![fetch-upstream](assets/fetch-upstream.png)
+
+![fetch-upstream](assets/fetch-and-merge.png)
+
+## 7. Go into your VS Code. Make sure your terminal puts you into the outer directory called SCF-SENG-032122-phase-1 (not in an inner folder). *To avoid merge conflicts, make sure your index.js is empty. Any code there can be cut and pasted into notes.js or otherIndex.js.*
+
+## 8. Add and commit all changes (i.e., `git add .` and `git commit -m "your message goes here"`) 
+
+## 9. Go ahead and `git pull` and you should be good to go!
