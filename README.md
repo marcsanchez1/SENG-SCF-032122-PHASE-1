@@ -1,6 +1,6 @@
 # SENG-SCF-032122-PHASE-1
 
-## To pull this repo down to your computer: 
+### To pull this repo down to your computer: 
 
 ### 1. Click the fork icon 
 
@@ -29,8 +29,10 @@
 
 ![fetch-upstream](assets/fetch-and-merge.png)
 
-## 7. Go into your VS Code. Make sure your terminal puts you into the outer directory called SCF-SENG-032122-phase-1 (not in an inner folder). *To avoid merge conflicts, make sure your index.js is empty. Any code there can be cut and pasted into notes.js or otherIndex.js.*
+### 7. Go into your VS Code. Make sure your terminal puts you into the outer directory called SCF-SENG-032122-phase-1 (not in an inner folder). 
 
-## 8. Add and commit all changes (i.e., `git add .` and `git commit -m "your message goes here"`) 
+*To avoid merge conflicts, make sure your index.js is empty. Any code there can be cut and pasted into notes.js or otherIndex.js.*
 
-## 9. Go ahead and `git pull` and you should be good to go! (You can `git push` after this step. At this point your Github repo will be 100% up to date with what is on your system.)
+### 8. Add and commit all changes (i.e., `git add .` and `git commit -m "your message goes here"`) 
+
+### 9. Go ahead and `git pull` and you should be good to go! (You can `git push` after this step. At this point your Github repo will be 100% up to date with what is on your system.)
