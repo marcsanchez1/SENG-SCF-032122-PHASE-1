@@ -23,7 +23,9 @@
 
 *Note: If you successfully added `code` to your Shell commands when you set up your environment, you should be able to use the command `code` plus the file you're cd'ing into. Or if you've cd'ed in as a separate command, you can use `code .` to open the new file.*
 
-### 6. Go to your FORKED version and click Fetch upstream. Then click fetch and merge. This will sync your repo with the learn-co-students one (if and when there are updates for you).
+then....
+
+### 6. Go to your FORKED version of the repo and click Fetch upstream. Then click fetch and merge. This will sync your repo with the learn-co-students one (if and when there are updates for you).
 
 ![fetch-upstream](assets/fetch-upstream.png)
 
