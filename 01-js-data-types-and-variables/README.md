@@ -45,6 +45,10 @@ Note: you can search for and install all of these at the left side of your VS Co
 
 ---
 
+### Deeeep dive into [JS data types and their inherent quirks](https://codeburst.io/javascript-essentials-types-data-structures-3ac039f9877b)
+
+---
+
 ### [Difference Between a Statement and an Expression (I can never remember it myself)](https://javascript.plainenglish.io/what-is-an-expression-and-what-is-a-statement-in-javascript-and-how-to-remember-it-4d6920ee7b08)
 
 ---
