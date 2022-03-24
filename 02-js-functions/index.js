@@ -5,10 +5,11 @@ function renderGreeting(name){
     console.log("name is type: ", typeof name)
     if(typeof name === "string"){
       h3.innerText = "Hi there," + " " + name + "!!"
-      document.querySelector("div").append(h3)
+      const div = document.querySelector("div")
+      div.className = "header"
+      div.append(h3)
     } 
 }
 // let me = prompt("Hi there pls tell me your name")
 // console.log(typeof me)
 // renderGreeting(me)
-
