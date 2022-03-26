@@ -8,7 +8,7 @@ What are JavaScript functions and why do we use them?
 
 - Declaring vs invoking functions
 - Function Declaration vs Function Expression vs Arrow Function
-- Function nuances
+- Function nuances including hoisting
 - Callback Functions
 - Callback Functions vs High Order Functions
 
