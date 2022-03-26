@@ -1,4 +1,4 @@
-### Functions!!!
+## Functions!!!
 
 What are functions and why do we use them?? 
 - a block of code made to do a specific task

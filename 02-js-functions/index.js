@@ -23,11 +23,11 @@ function sayHi(name) {
     return `Hi ${name} how are you doing today?`
 }
 
-sayHi('Desh')
+// sayHi('Desh')
 
 const bestFriendEver = "Desh"
 
-sayHi(bestFriendEver)
+// sayHi(bestFriendEver)
 
 function faveThing(category, thing) {
   return "This is the best " + category + ": " + thing;
