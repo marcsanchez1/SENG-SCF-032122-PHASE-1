@@ -27,4 +27,6 @@ What are JavaScript functions and why do we use them?
 
 - [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)
 
+- [Switch as an alternative to if/else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+
 - [Brief video on command line basics. Some of this we've already covered and some we haven't.](https://youtu.be/5XgBd6rjuDQ)
