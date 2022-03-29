@@ -26,7 +26,5 @@
 
 &emsp; [MDN Property Accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 
-&emsp; [The Modern JavaScript Tutorial - Prototypal Inheritance](https://javascript.info/prototype-inheritance)
-
-&emsp; [The Essential Guide to JavaScript Iterators](https://www.javascripttutorial.net/es6/javascript-iterator/)
+&emsp; [The Modern JavaScript Tutorial - Prototypal Inheritance (Advanced Concepts Here!)](https://javascript.info/prototype-inheritance)
 
