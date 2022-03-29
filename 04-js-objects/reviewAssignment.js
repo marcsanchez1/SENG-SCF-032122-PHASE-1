@@ -8,7 +8,7 @@
 
 // 1. Write a function 'add' with 2 parameters, num1 and num2. Return the sum of the two parameters. 
 
-// 2. Write a function 'sub' with 2 parameters, num1 and num2. Return the absolute (positive) value of the two parameters subtracted from one another.
+// 2. Write a function 'sub' with 2 parameters, num1 and num2. Return the absolute (positive) value of the two parameters subtracted from one another. (There are a few ways to do this. Pick one!)
 
 // 3. Write a function 'compute' that will receive a callback function. Invoke the callback function within 'compute' with two arguments provided: 6 and 3.
 
