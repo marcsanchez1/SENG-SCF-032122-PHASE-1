@@ -1,4 +1,4 @@
-# JavaScript Objects
+# JS OBJECTS
 
 * Remember that array methods and object methods do not generally overlap. Check the MDN docs for your particular data type if you can't get the method to run.
 
