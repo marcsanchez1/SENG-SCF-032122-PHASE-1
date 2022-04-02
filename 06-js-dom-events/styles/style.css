@@ -2,6 +2,8 @@
 
 body {
   box-sizing: border-box;
+  background: linear-gradient(rgb(243, 243, 178), rgb(143, 143, 239));
+  height: 100vh;
 }
 
 #welcome {
