@@ -1,11 +1,11 @@
 ## DOM Manipulation and DOM Events
 
 Agenda / Objectives:<br>
-6:00-7:00pm - tbd<br>
+6:00-7:00pm - Warm up exercise & intro to how the web works<br>
 7:00-7:10pm - BREAK <br>
-7:10pm-8:10am - tbd <br>
+7:10pm-8:10am - Test our endpoint with Postmand and use fetch to make a GET request <br>
 8:10pm-8:20 - BREAK <br>
-8:20pm-9:00 - tbd <br>
+8:20pm-9:00 - Continuing GET requests and pokemon functionality (talk about single page applications, aka SPAs) <br>
 
 ***
 
@@ -20,8 +20,8 @@ Agenda / Objectives:<br>
 ### Using JSON Server
 
 - Install JSON Server by running the following command in the terminal: `npm install -g json-server`
-- To start the JSON server, run `json-server --watch db.json --routes routes.json` while in the directory that contains the `db.json` file i.e. `SENG-LIVE-022122-phase-1/07-async-fetch`
-- For this project, we will use the following endpoint: `http://localhost:3000/characters`
+- To start the JSON server, run `json-server --watch db.json --routes routes.json` while in the directory that contains the `db.json` file i.e. `SCF-SENG.../07-async-fetch`
+- For this project, we will start with the following endpoint: `http://localhost:3000/characters`
 
 ### Warm up exercise
 
@@ -62,6 +62,12 @@ Agenda / Objectives:<br>
 
 ### Resources
 
+- [Anatomy of a URL](https://medium.com/@joseph.pyram/9-parts-of-a-url-that-you-should-know-89fea8e11713)
+
+- [RESTful Routes Cheatsheet](https://www.learnhowtoprogram.com/c-and-net/basic-web-applications/introduction-to-restful-routing)
+
 - [MDN .replaceChildren()](https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceChildren)
+
+- [Event.stopPropagation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
 
 - [MDN debugger](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)

@@ -16,9 +16,10 @@ function addPoke(e) {
   };
 
   renderPokemon(newPoke)
-  // add object to pokemonDB. Note: this will not persist on page refresh.
+  // add new character object to pokemonDB. Note: this will not persist on page refresh.
   pokemonDB.push(newPoke)
   pokeForm.reset()
+  alert("nice job! your new poke is added to page")
 }
 
 const pokeContainer = document.querySelector("#poke-container");
