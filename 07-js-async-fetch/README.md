@@ -1,11 +1,11 @@
-## DOM Manipulation and DOM Events
+## Async JS and Fetch
 
 Agenda / Objectives:<br>
 6:00-7:00pm - Warm up exercise & intro to how the web works<br>
 7:00-7:10pm - BREAK <br>
-7:10pm-8:10am - Test our endpoint with Postmand and use fetch to make a GET request <br>
-8:10pm-8:20 - BREAK <br>
-8:20pm-9:00 - Continuing GET requests and pokemon functionality (talk about single page applications, aka SPAs) <br>
+7:10-8:10pm - Test our endpoint with Postmand and use fetch to make a GET request <br>
+8:10-8:20pm - BREAK <br>
+8:20-9:00pm - Continuing GET requests and pokemon functionality (talk about single page applications, aka SPAs) <br>
 
 ***
 
