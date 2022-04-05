@@ -3,7 +3,7 @@
 Agenda / Objectives:<br>
 6:00-7:00pm - Warm up exercise & intro to how the web works<br>
 7:00-7:10pm - BREAK <br>
-7:10-8:10pm - Test our endpoint with Postmand and use fetch to make a GET request <br>
+7:10-8:10pm - Test our endpoint with Postman and use fetch to make a GET request <br>
 8:10-8:20pm - BREAK <br>
 8:20-9:00pm - Continuing GET requests and pokemon functionality (talk about single page applications, aka SPAs) <br>
 
