@@ -1,4 +1,4 @@
-
+console.log("heyyyyyyyyyyyyy")
 
 // const newPoke = {
 //   name: "pikachu",
