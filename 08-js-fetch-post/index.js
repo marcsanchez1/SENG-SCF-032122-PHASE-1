@@ -36,7 +36,7 @@ function showCharacter(character) {
     const newPokeCard = renderPokemon(returnedChar)
     newPokeCard.id = 'poke-show-card'
     // newPokeCard.dataset.id = returnedChar.id
-    // loadComments(newPokeCard, returnedChar)
+    loadComments(newPokeCard, returnedChar)
     pokeContainer.replaceChildren(newPokeCard)
     pokeFormContainer.replaceChildren(commentsForm())
   })
@@ -67,15 +67,16 @@ function commentsForm() {
   return form;
 }
 
-// rendering one comment ("li")
-function renderComment(comment) {
+// rendering one comment ("li") and append
+function renderComment(ul, comment) {
   const newComment = document.createElement("li")
-  newComment.textContent = comment
+  newComment.textContent = comment.content
+  ul.append(newComment)
   return newComment
 }
 
 // LOAD COMMENTS AND RENDER THEM ON POKE SHOW PAGE
-  
+
   
 // INITIALIZE
 // re-written to catch any errors
