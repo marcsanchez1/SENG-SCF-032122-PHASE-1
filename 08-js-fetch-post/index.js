@@ -31,7 +31,9 @@ function addPoke(e) {
 //  SHOW PAGE - 1 POKE
 function showCharacter(character) {
   fetch(`http://localhost:3000/characters/${character.id}`)
-  .then(resp => resp.json())
+  .then(response => {
+    return response.json()
+  })
   .then(returnedChar => {
     const newPokeCard = renderPokemon(returnedChar)
     newPokeCard.id = 'poke-show-card'
@@ -47,7 +49,6 @@ function showCharacter(character) {
 function commentsForm() {
   const form = document.createElement("form");
   form.id = "comment-form";
-
   // attach an event listener to the #comment-form here
 
   const commentInput = document.createElement("input");
@@ -76,6 +77,21 @@ function renderComment(ul, comment) {
 }
 
 // LOAD COMMENTS AND RENDER THEM ON POKE SHOW PAGE
+function loadComments(pokeCard, character){
+  const commentsDiv = document.createElement("div")
+  commentsDiv.id = `comment-card-${character.id}`
+  const commentsList = document.createElement("ul")
+  const numComments = document.createElement("h4")
+  // numComments.textContent = `${character.comments.length} comments: `
+  numComments.textContent = `${character.comments.length} ${character.comments.length > 1 ? "comments" : "comment"} : `
+
+  // numComments.textContent = character.comments.length + (character.comments.length === 1 ? ' comment:': ' comments:' )
+
+  commentsDiv.append(numComments, commentsList)
+  pokeCard.append(commentsDiv)
+  character.comments.forEach(comment => 
+    renderComment(commentsList, comment))
+}
 
   
 // INITIALIZE
@@ -83,12 +99,11 @@ function renderComment(ul, comment) {
 function getPokemon(){
   fetch('http://localhost:3000/characters')
   .then(resp => {
-    // debugger
     if(resp.ok){
       return resp.json()
     } else {
       // if there is an error, we create a new Error and pass it to .catch()
-      throw new Error("yikes there was an error: ", resp.status, resp.statusText)
+      throw new Error(`yikes there was an error: ${resp.status}, ${resp.statusText}`)
     }
   })
   .then(returnedArr => returnedArr.forEach(pokeObject => renderPokemon(pokeObject)))
