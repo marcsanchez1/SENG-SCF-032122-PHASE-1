@@ -35,7 +35,7 @@ function showCharacter(character) {
   .then(returnedChar => {
     const newPokeCard = renderPokemon(returnedChar)
     newPokeCard.id = 'poke-show-card'
-    // newPokeCard.dataset.id = returnedChar.id
+    newPokeCard.dataset.id = returnedChar.id
     loadComments(newPokeCard, returnedChar)
     pokeContainer.replaceChildren(newPokeCard)
     pokeFormContainer.replaceChildren(commentsForm())
@@ -76,8 +76,20 @@ function renderComment(ul, comment) {
 }
 
 // LOAD COMMENTS AND RENDER THEM ON POKE SHOW PAGE
+function loadComments(pokeCard, character) {
+  const commentsList = document.createElement('ul')
+  commentsList.id = `comment-card-${character.id}`
+  const numComments = document.createElement('h4')
+  numComments.textContent = `${character.comments.length} comments:`
+  // console.log(character)
+  commentsList.append(numComments)
+  pokeCard.append(commentsList)
+  character.comments.forEach(comment => renderComment(commentsList, comment))
+  // console.log(numComments)
 
-  
+}
+
+
 // INITIALIZE
 // re-written to catch any errors
 function getPokemon(){
