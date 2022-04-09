@@ -2,6 +2,7 @@
 const pokeContainer = document.querySelector("#poke-container");
 const pokeForm = document.getElementById("poke-form");
 const pokeFormContainer = document.getElementById("poke-form-container");
+const BASE_URL = `http://localhost:3000`
 
 // EVENT LISTENER
 pokeForm.addEventListener("submit", addPoke);
@@ -14,30 +15,39 @@ function addPoke(e) {
   const img = document.getElementById("img-input").value;
 
   const newPoke = {
-    id: pokemonDB.length + 1, // temporary solution using static array db.json
     name: name,
     img: img,
     likes: 0,
   };
 
-  renderPokemon(newPoke)
+  fetch(`${BASE_URL}/characters`, {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify(newPoke)
+  })
+  .then(resp => resp.json())
+  .then(newPokeObject => renderPokemon(newPokeObject))
+
   // add new character object to pokemonDB array. Note: this will not persist on page refresh.
-  pokemonDB.push(newPoke)
+  // pokemonDB.push(newPoke)
   pokeForm.reset()
   alert("nice job! your new poke is added to page")
 }
 
-
 //  SHOW PAGE - 1 POKE
 function showCharacter(character) {
-  fetch(`http://localhost:3000/characters/${character.id}`)
+  fetch(`${BASE_URL}/characters/${character.id}`)
   .then(response => {
     return response.json()
   })
   .then(returnedChar => {
     const newPokeCard = renderPokemon(returnedChar)
     newPokeCard.id = 'poke-show-card'
-    // newPokeCard.dataset.id = returnedChar.id
+    newPokeCard.dataset.id = returnedChar.id
+    // newPokeCard.dataset.ability = "toxicwhip"
     loadComments(newPokeCard, returnedChar)
     pokeContainer.replaceChildren(newPokeCard)
     pokeFormContainer.replaceChildren(commentsForm())
@@ -49,7 +59,13 @@ function showCharacter(character) {
 function commentsForm() {
   const form = document.createElement("form");
   form.id = "comment-form";
+  
   // attach an event listener to the #comment-form here
+  form.addEventListener('submit', (e) => {
+    submitComment(e)
+    form.reset()
+  });
+    
 
   const commentInput = document.createElement("input");
   commentInput.type = "text";
@@ -66,6 +82,33 @@ function commentsForm() {
   form.append(label, commentInput, submit);
 
   return form;
+}
+
+function submitComment(e) {
+  e.preventDefault()
+  const commentsList = document.querySelector("ul")
+  const content = document.querySelector('#comment-input').value
+  const characterId = parseInt(document.getElementById('poke-show-card').dataset.id)
+  
+  // Target my input, eventually do a POST request
+  // need an object to pass into the funciton
+  // input is a comment with a key property to of content
+  const newComment = {
+    characterId: characterId,
+    content: content,
+  // from here we will POST and then we have a renderComment function
+};
+// console.log(newComment)
+fetch(`${BASE_URL}/comments`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  },
+  body: JSON.stringify(newComment)
+})
+.then(resp => resp.json())
+.then(commentObj => renderComment(commentsList, commentObj))
 }
 
 // rendering one comment ("li") and append
@@ -97,7 +140,7 @@ function loadComments(pokeCard, character){
 // INITIALIZE
 // re-written to catch any errors
 function getPokemon(){
-  fetch('http://localhost:3000/characters')
+  fetch(`${BASE_URL}/characters`)
   .then(resp => {
     if(resp.ok){
       return resp.json()
@@ -145,8 +188,19 @@ function renderPokemon(character) {
 
   function addLikes(e) {
     e.stopPropagation()
-    character.likes += 1; 
-    likesNum.textContent = character.likes;
+
+    fetch(`${BASE_URL}/characters/${character.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({likes: ++character.likes})
+    })
+    .then(resp => resp.json())
+    .then(updatedChar => likesNum.textContent = updatedChar.likes)
+    // character.likes += 1; 
+    // likesNum.textContent = character.likes;
   }
 
   
@@ -156,7 +210,19 @@ function renderPokemon(character) {
 
   deleteBtn.addEventListener("click", (e) => {
     e.stopPropagation()
-    pokeCard.remove()
+
+    fetch(`${BASE_URL}/characters/${character.id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      }
+    })
+    .then(resp => resp.json())
+    .then(() => pokeCard.remove())
+
+    // Optimistic Rendering
+    // pokeCard.remove()
   });
 
   pokeCard.append(pokeImg, pokeName, pokeLikes, likesNum, likeBtn, deleteBtn);
@@ -165,4 +231,3 @@ function renderPokemon(character) {
   // returning our pokeCard so we can use the return value of the render function in our pokeCard div event listener
   return pokeCard
 }
-

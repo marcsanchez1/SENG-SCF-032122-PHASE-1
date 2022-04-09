@@ -1,40 +1,95 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "bulbasaur",
-      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-      "likes": 4
+      "name": "Charizard",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+      "likes": 0,
+      "id": 8
     },
     {
-      "id": 2,
-      "name": "ivysaur",
-      "img": "https://images.cults3d.com/6VgkTLM1j-CTAMhEJTtsRV1z6N8=/516x516/https://files.cults3d.com/uploaders/14845535/illustration-file/5d09c257-51ed-4d65-aa36-3f9201af34c4/ivysaur.png",
-      "likes": 19
+      "name": "Squirtle",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+      "likes": 0,
+      "id": 9
     },
     {
-      "id": 3,
-      "name": "venusaur",
-      "img": "https://images.saymedia-content.com/.image/t_share/MTc2MjYwODQ5NTk2NTcyODYy/pokemon-venusaur-nicknames.png",
-      "likes": 12
+      "name": "Bouffalant",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/626.png",
+      "likes": 0,
+      "id": 10
     },
     {
-      "id": 4,
-      "name": "charmander",
-      "img": "https://pixy.org/download/1207107/",
-      "likes": 20
+      "name": "Markemon",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/625.png",
+      "likes": 0,
+      "id": 11
+    },
+    {
+      "name": "Pawniard",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/624.png",
+      "likes": 0,
+      "id": 12
+    },
+    {
+      "name": "HokeyPokey",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png",
+      "likes": 0,
+      "id": 13
+    },
+    {
+      "name": "Metapod",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
+      "likes": 0,
+      "id": 14
+    },
+    {
+      "name": "Butterfree",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
+      "likes": 1,
+      "id": 15
+    },
+    {
+      "name": "Weedle",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png",
+      "likes": 0,
+      "id": 16
     }
   ],
   "comments": [
     {
-      "id": 3,
-      "characterId": 2,
-      "content": "I love Ivysaur more!"
+      "characterId": 11,
+      "content": "Holla baby!!!",
+      "id": 7
     },
     {
-      "characterId": 2,
-      "content": "ohhh ivysaur how i love you",
-      "id": 6
+      "characterId": 8,
+      "content": "Love me some charizard",
+      "id": 8
+    },
+    {
+      "characterId": 15,
+      "content": "Hey Butterfree!!!!",
+      "id": 9
+    },
+    {
+      "characterId": 8,
+      "content": "Chizards is the shit!",
+      "id": 10
+    },
+    {
+      "characterId": 8,
+      "content": "afsdfa",
+      "id": 11
+    },
+    {
+      "characterId": 9,
+      "content": "Squirtle McDertle",
+      "id": 12
+    },
+    {
+      "characterId": 10,
+      "content": "Buffalo",
+      "id": 13
     }
   ]
 }
