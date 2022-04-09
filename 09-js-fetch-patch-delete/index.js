@@ -37,7 +37,7 @@ function showCharacter(character) {
   .then(returnedChar => {
     const newPokeCard = renderPokemon(returnedChar)
     newPokeCard.id = 'poke-show-card'
-    newPokeCard.dataset.id = returnedChar.id
+    // newPokeCard.dataset.id = returnedChar.id
     loadComments(newPokeCard, returnedChar)
     pokeContainer.replaceChildren(newPokeCard)
     pokeFormContainer.replaceChildren(commentsForm())
@@ -77,21 +77,6 @@ function renderComment(ul, comment) {
 }
 
 // LOAD COMMENTS AND RENDER THEM ON POKE SHOW PAGE
-<<<<<<< HEAD
-function loadComments(pokeCard, character) {
-  const commentsList = document.createElement('ul')
-  commentsList.id = `comment-card-${character.id}`
-  const numComments = document.createElement('h4')
-  numComments.textContent = `${character.comments.length} comments:`
-  // console.log(character)
-  commentsList.append(numComments)
-  pokeCard.append(commentsList)
-  character.comments.forEach(comment => renderComment(commentsList, comment))
-  // console.log(numComments)
-
-}
-
-=======
 function loadComments(pokeCard, character){
   const commentsDiv = document.createElement("div")
   commentsDiv.id = `comment-card-${character.id}`
@@ -107,8 +92,8 @@ function loadComments(pokeCard, character){
   character.comments.forEach(comment => 
     renderComment(commentsList, comment))
 }
->>>>>>> cb314c0e54d70faba26b2163ee8e5e51b4413cc5
 
+  
 // INITIALIZE
 // re-written to catch any errors
 function getPokemon(){
@@ -180,3 +165,4 @@ function renderPokemon(character) {
   // returning our pokeCard so we can use the return value of the render function in our pokeCard div event listener
   return pokeCard
 }
+
