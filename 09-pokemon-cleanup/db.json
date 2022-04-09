@@ -1,21 +1,9 @@
 {
   "characters": [
     {
-      "name": "Charizard",
-      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
-      "likes": 0,
-      "id": 8
-    },
-    {
-      "name": "Squirtle",
-      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
-      "likes": 0,
-      "id": 9
-    },
-    {
       "name": "Bouffalant",
       "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/626.png",
-      "likes": 0,
+      "likes": 9,
       "id": 10
     },
     {
@@ -53,6 +41,18 @@
       "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png",
       "likes": 0,
       "id": 16
+    },
+    {
+      "name": "Bulbasaur",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+      "likes": 2,
+      "id": 17
+    },
+    {
+      "name": "Calyrex",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/898.png",
+      "likes": 0,
+      "id": 18
     }
   ],
   "comments": [
@@ -62,34 +62,24 @@
       "id": 7
     },
     {
-      "characterId": 8,
-      "content": "Love me some charizard",
-      "id": 8
-    },
-    {
       "characterId": 15,
       "content": "Hey Butterfree!!!!",
       "id": 9
     },
     {
-      "characterId": 8,
-      "content": "Chizards is the shit!",
-      "id": 10
-    },
-    {
-      "characterId": 8,
-      "content": "afsdfa",
-      "id": 11
-    },
-    {
-      "characterId": 9,
-      "content": "Squirtle McDertle",
-      "id": 12
-    },
-    {
       "characterId": 10,
       "content": "Buffalo",
       "id": 13
+    },
+    {
+      "characterId": 17,
+      "content": "Rock solid character",
+      "id": 14
+    },
+    {
+      "characterId": 10,
+      "content": "Get'em!!!",
+      "id": 15
     }
   ]
 }

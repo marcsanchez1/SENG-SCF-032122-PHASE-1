@@ -4,30 +4,71 @@ const pokeForm = document.getElementById("poke-form");
 const pokeFormContainer = document.getElementById("poke-form-container");
 const BASE_URL = `http://localhost:3000`
 
-// EVENT LISTENER
-pokeForm.addEventListener("submit", addPoke);
+// INITIALIZE
+// re-written to catch any errors
+const getPokemon = async () => {
+  const result = await fetch(`${BASE_URL}/characters`)
+  const returnedArr = await result.json()
+  returnedArr.forEach((pokeObject) => renderPokemon(pokeObject))
+  // The below commented code is a long way of the above async
+  /* .then(resp => {
+    if(resp.ok){
+      return resp.json()
+    } else {
+      // if there is an error, we create a new Error and pass it to .catch()
+      throw new Error(`yikes there was an error: ${resp.status}, ${resp.statusText}`)
+    }
+  })
+  .then(returnedArr => returnedArr.forEach(pokeObject => renderPokemon(pokeObject)))
+  .catch(function(err){
+    console.log(err)
+  }) */
+}
 
+// EVENT LISTENER to INITIALIZE
+const init = () => {
+  pokeForm.addEventListener("submit", addPoke);
+  // INVOKE INITIALIZE
+  getPokemon()
+}
 
 // create poke function will not work with our API -- yet. But it still works with our static pokemonDB.
-function addPoke(e) {
+const addPoke = async (e) => {
   e.preventDefault();
   const name = document.getElementById("name-input").value;
   const img = document.getElementById("img-input").value;
 
   const newPoke = {
-    name: name,
-    img: img,
+    name, img,
     likes: 0,
   };
 
-  fetch(`${BASE_URL}/characters`, {
+  const config = {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json"
     },
     body: JSON.stringify(newPoke)
-  })
+  }
+
+  try {
+    const result = await fetch(`${BASE_URL}/characters`, config)
+    if(result.ok) {
+      const newPokeObj = await result.json()
+      renderPokemon(newPokeObj)
+    } else {
+        throw new Error(`ooopsie.... ${response.status}: ${response.statusText}`)
+    }
+  }
+  catch(err) {
+    alert(err)
+  }
+
+  // without try catch block - no error handling at all boooooo
+  const result = fetch(`${BASE_URL}/characters`, config )
+  const newPokeObj = await result.JSON
+  renderPokemon(newPokeObj)
   .then(resp => resp.json())
   .then(newPokeObject => renderPokemon(newPokeObject))
 
@@ -36,6 +77,8 @@ function addPoke(e) {
   pokeForm.reset()
   alert("nice job! your new poke is added to page")
 }
+
+init()
 
 //  SHOW PAGE - 1 POKE
 function showCharacter(character) {
@@ -136,29 +179,6 @@ function loadComments(pokeCard, character){
     renderComment(commentsList, comment))
 }
 
-  
-// INITIALIZE
-// re-written to catch any errors
-function getPokemon(){
-  fetch(`${BASE_URL}/characters`)
-  .then(resp => {
-    if(resp.ok){
-      return resp.json()
-    } else {
-      // if there is an error, we create a new Error and pass it to .catch()
-      throw new Error(`yikes there was an error: ${resp.status}, ${resp.statusText}`)
-    }
-  })
-  .then(returnedArr => returnedArr.forEach(pokeObject => renderPokemon(pokeObject)))
-  .catch(function(err){
-    console.log(err)
-  })
-}
-
-// INVOKE INITIALIZE
-getPokemon()
-
-
 function renderPokemon(character) {
   const pokeCard = document.createElement("div");
   pokeCard.id = `poke-${character.id}`;
@@ -199,11 +219,10 @@ function renderPokemon(character) {
     })
     .then(resp => resp.json())
     .then(updatedChar => likesNum.textContent = updatedChar.likes)
-    // character.likes += 1; 
+    // character.likes += 1; <<< Used the ++ increment in the body: JSON in place of this
     // likesNum.textContent = character.likes;
   }
 
-  
   const deleteBtn = document.createElement("button");
   deleteBtn.className = "delete-btn";
   deleteBtn.textContent = "Delete";
