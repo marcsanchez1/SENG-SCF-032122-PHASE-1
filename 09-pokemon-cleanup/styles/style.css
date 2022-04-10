@@ -98,6 +98,8 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 1260px;
+  margin: auto;
 }
 
 input[type="text"]:not(.edit-input) {
